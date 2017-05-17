@@ -1274,6 +1274,8 @@ var app = {
 			}
 		}
 
+		// from here: http://stackoverflow.com/questions/8264528/image-preloader-javascript-that-supports-events/8265310#8265310
+
 		function preloadImages(srcs) {
 			function loadImage(src) {
 				return new _promise2.default(function (resolve, reject) {

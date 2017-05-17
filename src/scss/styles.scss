@@ -5,6 +5,8 @@
 
 html {
 	height: 100%;
+	background-color: black;
+	min-height: 66vw;
 }
 
 body {
@@ -108,5 +110,27 @@ body {
 	& #right {
 		right: -7%;
 		text-align: right;
+	}
+}
+
+#attribution {
+	position: absolute;
+	color: gray;
+	font-family: "Futura", "Gill Sans", "Helvetica Neue", "Helvetica", sans-serif;
+	font-size: 18px;
+	text-align: center;
+	top:64vw;
+	width: 100%;
+	& a {
+		color: #ccc;
+		text-decoration: none;
+		font-weight: bold;
+		&:hover {
+			color: #ccc;
+			text-decoration: underline;
+		}
+		&:visited {
+			color: #ccc;
+		}
 	}
 }
