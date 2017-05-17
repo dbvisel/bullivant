@@ -1,0 +1,45 @@
+{
+  "name": "bullivant",
+  "version": "0.0.1",
+  "description": "A project that makes slightly animated presentations from a script.",
+  "main": "index.js",
+	"config": {
+    "sourcejs": "src/js/app.js",
+    "distjs": "dist/js/app.js",
+    "distminjs": "dist/js/app.min.js"
+  },
+  "scripts": {
+		"scss": "node-sass --output-style compressed -o dist/css src/scss & node-sass --output-style compressed -o src/css src/scss",
+    "watch-scss": "node-sass src/scss -wo dist/css & node-sass src/scss -wo src/css",
+		"autoprefixer": "postcss -u autoprefixer --autoprefixer.browsers '> 5%, ie 9' -r dist/css/*",
+		"build-js": "webpack $npm_package_config_sourcejs $npm_package_config_distjs",
+    "watch-js": "webpack --progress --colors --watch $npm_package_config_sourcejs $npm_package_config_distjs",
+    "wpserve": "webpack-dev-server --progress --colors --watch $npm_package_config_sourcejs $npm_package_config_distjs",
+		"production-js": "webpack $npm_package_config_sourcejs $npm_package_config_distjs && uglifyjs $npm_package_config_distjs -m -o $npm_package_config_distminjs",
+		"production-css": "npm run scss & npm run autoprefixer",
+		"production": "npm run production-css && npm run production-js",
+		"watch": "npm run watch-scss & npm run watch-js"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^7.1.0",
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-latest": "^6.24.1",
+    "babelify": "^7.3.0",
+    "eslint": "^3.19.0",
+    "eslint-plugin-compat": "^1.0.2",
+    "node-sass": "^4.5.2",
+    "uglify-js": "^3.0.5",
+    "webpack": "^2.5.1"
+  }
+}

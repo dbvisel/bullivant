@@ -1,0 +1,12 @@
+# Ignore Mac OS Stuff
+.DS_Store
+
+# Node
+node_modules
+node_modules/
+node_modules/**/*
+
+# my working files
+raw
+raw/
+raw/**/*

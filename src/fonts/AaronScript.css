@@ -1,0 +1,12 @@
+/* Webfont: AaronScript */@font-face {
+    font-family: 'AaronScript';
+    src: url('AaronScript.eot'); /* IE9 Compat Modes */
+    src: url('AaronScript.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('AaronScript.woff') format('woff'), /* Modern Browsers */
+         url('AaronScript.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('AaronScript.svg#AaronScript') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

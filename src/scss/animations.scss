@@ -1,0 +1,57 @@
+// animations.scss
+//
+// this is only used for animations right now
+
+.animation_moveuptext {
+	-webkit-animation: 1s linear 0s infinite alternate moveuptext;
+					animation: 1s linear 0s infinite alternate moveuptext;
+}
+
+.animation_backandforth {
+	-webkit-animation: 1s linear 0s infinite alternate backandforth;
+					animation: 1s linear 0s infinite alternate backandforth;
+}
+
+
+.animation_rotator {
+	-webkit-animation: 1s linear 0s infinite alternate rotator;
+					animation: 1s linear 0s infinite alternate rotator;
+}
+
+.animation_moveup {
+	-webkit-animation: 1s linear 0s infinite alternate moveup;
+					animation: 1s linear 0s infinite alternate moveup;
+}
+
+
+@keyframes backandforth {
+	from {
+		margin-left: -1%;
+	} to {
+		margin-left: 1%;
+	}
+}
+
+@keyframes rotator {
+	from {
+		transform: rotate(-3deg);
+	} to {
+		transform: rotate(3deg);
+	}
+}
+
+@keyframes moveup {
+	from {
+		bottom: -2%;
+	} to {
+		bottom: 0%;
+	}
+}
+
+@keyframes moveuptext {
+	from {
+		margin-bottom: -2%;
+	} to {
+		margin-bottom: 0%;
+	}
+}
