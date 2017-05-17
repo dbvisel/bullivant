@@ -30,6 +30,8 @@ Inside of **pages** is a list of pages in order. Each page has:
  * **style**, the default style that the character's texts are displayed in.
  * **images**, a list of different images that can be used for a character. Each **image** contains the image's filename, its dimensions, and the default way in which it is shown.
 
+(The images that I'm using for characters are transparent GIFs. A smarter way to do this would be to use SVGs or PNGs, but those were the images I had lying around.)
+
 **Styles** basically consist of:
 
  * **name**, the name of a style. This gets used in the character definition (and could be used on a page).
