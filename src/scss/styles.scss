@@ -59,6 +59,16 @@ body {
 	position: absolute;
 	background-size:100% 100%;
 	bottom: 0;
+	&.flip {
+
+		// adding this class flips horizontally.
+		// presumably this will screw up our x + y positions?  check.
+		// this doesn't currently work because rotate is being applied and overrides the transform
+
+		transform: scaleX(-1);
+		filter: FlipH;
+		-ms-filter: "FlipH";
+	}
 }
 
 .textbubble {

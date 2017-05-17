@@ -12,15 +12,15 @@ let appdata = {
 
 const app = {
 	initialize: function() {
+
+		app.preload(); 		// preload images
+
 		app.render(appdata.page);
 
-		// preload images
-
 		window.onresize = function() {
-			// this could maybe be debounced, but it's okay for now
-			app.render(appdata.page);
+			app.render(appdata.page);			// this could maybe be debounced, but it's okay for now
 		};
-		
+
 		// set up controls
 
 		document.querySelector("#controls #left").onclick = app.goleft;
@@ -28,6 +28,59 @@ const app = {
 		document.querySelector("#characterlayer").onclick = app.goright;
 		app.setupkeys();
 
+	},
+	preload: function() {
+		let imagelist = [];
+		if(bookdata.background.filename) {
+			imagelist.push(bookdata.background.filename);
+		}
+		for(let i = 0; i < bookdata.characters.length; i++) {
+			for(let j = 0; j < bookdata.characters[i].images.length; j++) {
+				if(bookdata.characters[i].images[j].filename) {
+					if(imagelist.indexOf(bookdata.characters[i].images[j].filename) < 0) {
+						imagelist.push(bookdata.characters[i].images[j].filename);
+
+						// would be good to figure out width and height of these images and put this into bookdata?
+
+					}
+				}
+			}
+		}
+		for(let i =0; i < bookdata.pages.length; i++) {
+			if(bookdata.pages[i].background.filename) {
+				if(imagelist.indexOf(bookdata.pages[i].background.filename) < 0) {
+					imagelist.push(bookdata.pages[i].background.filename);
+				}
+			}
+		}
+
+		function preloadImages(srcs) {
+			function loadImage(src) {
+				return new Promise(function(resolve, reject) {
+					var img = new Image();
+					img.onload = function() {
+						resolve(img);
+					};
+					img.onerror = img.onabort = function() {
+						reject(src);
+					};
+					img.src = settings.paths.images + src;
+				});
+			}
+			var promises = [];
+			for (var i = 0; i < srcs.length; i++) {
+				promises.push(loadImage(srcs[i]));
+			}
+			return Promise.all(promises);
+		}
+
+		preloadImages(imagelist).then(function(imgs) {
+		// all images are loaded now and in the array imgs
+			console.log(`${imgs.length} images have been preloaded.`);
+		}, function(errImg) {
+			console.log("Images failed to preload:");
+			console.log(errImg);
+		});
 	},
 	setupkeys: function() {
 		document.body.onkeydown = (e) => {

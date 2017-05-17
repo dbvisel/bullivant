@@ -8,6 +8,7 @@ const bookdata = {
 		opacity: 0.5
 	},
 	characters: [
+
 		{
 			name: "horace",
 			images: [

@@ -1,6 +1,6 @@
 # bullivant.js
 
-This makes mildly animated paged books. Source code is in _/src_; distribution version is in _/dist_.
+This makes mildly animated paged books. Demonstration is at https://danvisel.net/bullivant. Source code is in _/src_; distribution version is in _/dist_.
 
  * To install: _node install_
  * To build: _npm run production_
