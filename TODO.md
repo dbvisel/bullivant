@@ -10,6 +10,7 @@
  * clean up the fonts we're using – does OTF actually work everywhere?
  * make some kind of gesture towards supporting mobile
  * add script to clean/downsize images
+ * should bookfiles have their own settings object? For autoplay probably?
 
 ## features
 
@@ -17,6 +18,7 @@
  * way to set it playing automatically if so desired
  * better controls
  * audio?
+ * change bookfile to JSON on a server rather than as a module
 
 ## offshoots
 

@@ -10,7 +10,7 @@ This could be used with any content.
 
 ## Book data
 
-The book data is in _js/src/bookdata.js_. Right now it's using Ivy Compton-Burnett's _Bullivant and the Lambs_ (the original American title for _Manservant and Maidservant_), though that's easy to change. The book data file is JSON. It contains five parts:
+The book data is in _js/src/bookdata.js_. Right now it's using Ivy Compton-Burnett's _Bullivant and the Lambs_ (the original American title for _Manservant and Maidservant_), though that's easy to change. The book data file is essentially JSON. It contains five parts:
 
  * **duration** is how long (in seconds) each page should be shown by default if **autoplay** is set to **true**.
  * **background** is the default background for a page. This can be overridden.
@@ -40,9 +40,9 @@ Inside of **pages** is a list of pages in order. Each page has:
 
 ## Settings
 
-_modules/settings.js_ contains things that can be changed:
+_modules/settings.js_ contains things that can be changed in how the viewer app behaves:
 
  * **images.path** is the path to where image files can be found.
  * If **showcontrols** is set to **false**, controls will be hidden. (Keyboard controls still work, I think? Should test that.)
  * If **autoplay** is set to **true**, the pages will advance automatically based on the **duration** of a specific page (or failing that, the book's default **duration**).
- * If **controlsinside** is set to **true**, the controls will appear inside the stage (where they might appear over the characters or speech bubbles). 
+ * If **controlsinside** is set to **true**, the controls will appear inside the stage (where they might appear over the characters or speech bubbles).
