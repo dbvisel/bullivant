@@ -8,12 +8,15 @@
  * Use CSS transformations to horizontally flip images when we need to
   * need to make it handle multi-part transforms (when there's a magnify setting, for example)
  * clean up the fonts we're using – does OTF actually work everywhere?
+ * make some kind of gesture towards supporting mobile
+ * add script to clean/downsize images
 
 ## features
 
  * Some kind of progress meter?
  * way to set it playing automatically if so desired
  * better controls
+ * audio?
 
 ## offshoots
 

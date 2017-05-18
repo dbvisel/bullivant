@@ -45,3 +45,4 @@ _modules/settings.js_ contains things that can be changed:
  * **images.path** is the path to where image files can be found.
  * If **showcontrols** is set to **false**, controls will be hidden. (Keyboard controls still work, I think? Should test that.)
  * If **autoplay** is set to **true**, the pages will advance automatically based on the **duration** of a specific page (or failing that, the book's default **duration**).
+ * If **controlsinside** is set to **true**, the controls will appear inside the stage (where they might appear over the characters or speech bubbles). 

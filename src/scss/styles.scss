@@ -106,10 +106,16 @@ body {
 	}
 	& #left {
 		left: -7%;
+		&.controlsinside {
+			left: 2%;
+		}
 	}
 	& #right {
 		right: -7%;
 		text-align: right;
+		&.controlsinside {
+			right: 2%;
+		}
 	}
 }
 

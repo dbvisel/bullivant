@@ -15,6 +15,11 @@ const app = {
 
 		app.preload(); 		// preload images
 
+		if(settings.controlsinside) {
+			dom.addclass("#controls #left","controlsinside");
+			dom.addclass("#controls #right","controlsinside");
+		}
+
 		app.render(appdata.page);
 
 		window.onresize = function() {

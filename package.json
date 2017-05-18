@@ -1,6 +1,6 @@
 {
   "name": "bullivant",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A project that makes slightly animated presentations from a script.",
   "main": "index.js",
 	"config": {
